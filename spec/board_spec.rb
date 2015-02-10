@@ -15,4 +15,9 @@ describe Board do
 		expect(ship.location).to eq('X')
 	end
 
+	it 'know when a ship has been hit' do 
+		board.hit(ship.location)
+		expect(board).to be_locating_the_hit
+	end
+
 end
