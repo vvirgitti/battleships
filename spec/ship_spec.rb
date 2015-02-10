@@ -12,4 +12,8 @@ describe Ship do
 		expect(ship.location).to eq "A1"
 	end
 
+	it 'should know its position is B1' do
+		expect(ship.location).to eq "B1"
+	end
+
 end
