@@ -1,10 +1,11 @@
 class Ship
 
-	def initialize		
+	def initialize(location)
+		@location = location
 	end
 
 	def location
-		"A1"
+		@location
 	end
 
 
