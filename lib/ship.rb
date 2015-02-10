@@ -1,6 +1,11 @@
 class Ship
 
-	def location
+	def initialize		
 	end
+
+	def location
+		"A1"
+	end
+
 
 end
