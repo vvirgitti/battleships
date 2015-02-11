@@ -1,14 +1,17 @@
 class Ship
 
 
-	def initialize
-		
-		
+	def initialize(length = 2)
+    @length = length
 	end
 
 	def length
-		2
+		@length
 	end
+
+  def self.submarine
+    new 3
+  end
 
 
 end
