@@ -2,7 +2,12 @@ class Board
 
 
 	def place(ship, coord)
-		ships << ship
+		# ships << ship
+		coords << coord
+	end
+
+	def coords
+		@coords = []
 	end
 
 
@@ -12,7 +17,7 @@ class Board
 
 
 	def locate(ship)
-		'A1'
+		ship.coord
 	end
 
 
