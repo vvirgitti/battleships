@@ -25,12 +25,16 @@ describe Board do
 		expect(board.place_south(ship2,['A1'])).to eq(['A1','A2'])
 	end
 
-	it 'can place a ship of length 3 face south, starting at A1' do
+	it 'can place a ship of length 3 facing south, starting at A1' do
 		expect(board.place_south(ship3,['A1'])).to eq(['A1','A2', 'A3'])
 	end
 
-	it 'can place a ship of length 3 face east, starting at A1' do
-		expect(board.place_east(ship3,['A1'])).to eq(['A1','B1', 'B3'])
+	it 'can place a ship of length 3 facing east, starting at A1' do
+		expect(board.place_east(ship3,['A1'])).to eq(['A1','B1', 'C1'])
+	end
+
+	it 'can place a ship of length 3 facing north, starting at F1' do
+		expect(board.place_north(ship3,['F1'])).to eq(['F1','E1', 'D1'])
 	end
 
 end
