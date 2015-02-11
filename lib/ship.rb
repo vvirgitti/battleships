@@ -5,13 +5,23 @@ class Ship
     @length = length
 	end
 
+
 	def length
 		@length
 	end
 
-  def self.submarine
-    new 3
-  end
+
+	def self.submarine
+	   new 3
+	end
+
+
+	def self.aircraft_carrier
+		new 5
+	end
+
+
+
 
 
 end
