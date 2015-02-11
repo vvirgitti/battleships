@@ -5,6 +5,7 @@ describe Board do
 	let(:board) {Board.new}
 	let(:ship1) {double :ship, length: 1}
 	let(:ship2) {double :ship, length: 2}
+	let(:ship3) {double :ship, length: 3}
 
 
 	it 'can place a ship at a location A1' do
@@ -25,7 +26,11 @@ describe Board do
 	end
 
 	it 'can place a ship of length 3 face south, starting at A1' do
-		expect(board.place_south(ship2,['A1'])).to eq(['A1','A2', 'A3'])
+		expect(board.place_south(ship3,['A1'])).to eq(['A1','A2', 'A3'])
+	end
+
+	it 'can place a ship of length 3 face east, starting at A1' do
+		expect(board.place_east(ship3,['A1'])).to eq(['A1','B1', 'B3'])
 	end
 
 end

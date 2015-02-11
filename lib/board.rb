@@ -1,5 +1,8 @@
 class Board
 
+	def initiliaze
+	end
+
 
 	def place(ship, coord)
 		coord.each do |c|
@@ -24,7 +27,12 @@ class Board
 
 	def place_south(ship, coord)
 		coords << coord.join(', ')
-		coords << coord.join('').next
+		(ship.length-1).times do
+		coords << coords[-1].next
+		end
+		coords
 	end
+		
+	
 
 end
