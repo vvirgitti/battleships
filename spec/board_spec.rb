@@ -34,11 +34,11 @@ describe Board do
 	end
 
 	it 'raise an error when a ship is placed outside of the board (east)' do
-		expect{ board.place_east(ship2,['K1'])}.to raise_error("Can't be placed outside board")
+		expect{ board.place_east(ship2,['J1'])}.to raise_error("Can't be placed outside board")
 	end
 
 	it 'raise an error when a ship is placed outside of the board (south)' do
-		expect{ board.place_east(ship3,['A10'])}.to raise_error("Can't be placed outside board")
+		expect{ board.place_east(ship3,['K10'])}.to raise_error("Can't be placed outside board")
 	end
 
 
