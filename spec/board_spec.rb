@@ -24,4 +24,8 @@ describe Board do
 		expect(board.place_south(ship2,['A1'])).to eq(['A1','A2'])
 	end
 
+	it 'can place a ship of length 3 face south, starting at A1' do
+		expect(board.place_south(ship2,['A1'])).to eq(['A1','A2', 'A3'])
+	end
+
 end

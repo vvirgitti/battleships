@@ -8,7 +8,7 @@ class Board
 	end
 
 	def coords
-		@coords = []
+		@coords ||= []
 	end
 
 
@@ -21,5 +21,10 @@ class Board
 		ship.coord
 	end
 
+
+	def place_south(ship, coord)
+		coords << coord.join(', ')
+		coords << coord.join('').next
+	end
 
 end
