@@ -3,16 +3,12 @@ require 'board'
 describe Board do
 
 	let(:board) {Board.new}
-	let(:ship) {double :ship, location: 'X'}
+	let(:ship) {double :ship, length: 2}
 
-	it 'can have a ship' do
-		board.place(ship)
-		expect(board.ship_count).to eq 1
-	end
 
-	it 'can knows where the ship is located' do
-		board.place(ship)
-		expect(ship.location).to eq('X')
+	it 'can place a ship at a location' do
+		board.place(ship, 'A1')
+		expect(board.locate(ship)).to eq ('A1')
 	end
 
 	xit 'know when a ship has been hit' do

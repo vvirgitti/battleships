@@ -1,7 +1,7 @@
-class Board 
+class Board
 
 
-	def place(ship)
+	def place(ship, coord)
 		ships << ship
 	end
 
@@ -17,7 +17,7 @@ class Board
 
 
 	def hit(coord)
-		
+
 	end
 
 

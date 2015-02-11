@@ -5,7 +5,6 @@ class Ship
 
 	def initialize(length = 2)
     @length = length
-    @sunk = true
     @hit = 0
 	end
 
@@ -21,7 +20,7 @@ class Ship
 
 
   def sunk?
-    true
+    hits >= length
   end
 
 

@@ -22,22 +22,22 @@ describe Ship do
   end
 
 
-  it 'should know when it is sunk' do
-    expect(ship).to be_sunk
+  it 'knows when it is hit' do
+    ship.hit
+    expect(ship.hits).to eq 1
   end
 
 
-  xit 'should know when it is not sunk' do
+  it 'should know when it is not sunk' do
     expect(ship).not_to be_sunk
   end
 
 
-  it 'knows when it is hit' do
-  	ship.hit
-  	expect(ship.hits).to eq 1
+  it 'should know when it is sunk' do
+    ship = Ship.new(1)
+    ship.hit
+    expect(ship).to be_sunk
   end
-
-
 
 
 end
