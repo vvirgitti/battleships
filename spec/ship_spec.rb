@@ -11,23 +11,33 @@ describe Ship do
 
 
 	it 'should know that the submarine has a length of 3' do
-    	submarine = Ship.submarine
+    submarine = Ship.submarine
 		expect(submarine.length).to eq 3
 	end
 
 
-  	it 'should know that the aircraft carrier has a length of 5' do
-    	aircraft_carrier = Ship.aircraft_carrier
-    	expect(aircraft_carrier.length).to eq 5
-  	end
+  it 'should know that the aircraft carrier has a length of 5' do
+    aircraft_carrier = Ship.aircraft_carrier
+    expect(aircraft_carrier.length).to eq 5
+  end
 
 
   it 'should know when it is sunk' do
     expect(ship).to be_sunk
   end
 
-  it 'should know when it is not sunk' do
+
+  xit 'should know when it is not sunk' do
     expect(ship).not_to be_sunk
   end
+
+
+  it 'knows when it is hit' do
+  	ship.hit
+  	expect(ship.hits).to eq 1
+  end
+
+
+
 
 end

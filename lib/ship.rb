@@ -1,13 +1,12 @@
 class Ship
 
+	attr_reader :length, :hit
+
 
 	def initialize(length = 2)
     @length = length
-	end
-
-
-	def length
-		@length
+    @sunk = true
+    @hit = 0
 	end
 
 
@@ -20,8 +19,14 @@ class Ship
 		new 5
 	end
 
+
   def sunk?
     true
+  end
+
+
+  def hits
+  	hit =+ 1
   end
 
 
