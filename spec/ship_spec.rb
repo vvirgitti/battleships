@@ -26,4 +26,8 @@ describe Ship do
     expect(ship).to be_sunk
   end
 
+  it 'should know when it is not sunk' do
+    expect(ship).not_to be_sunk
+  end
+
 end

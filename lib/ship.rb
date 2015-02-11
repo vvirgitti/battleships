@@ -20,7 +20,9 @@ class Ship
 		new 5
 	end
 
-
+  def sunk?
+    true
+  end
 
 
 
