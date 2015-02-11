@@ -1,6 +1,6 @@
 require 'board'
 
-describe Board do 
+describe Board do
 
 	let(:board) {Board.new}
 	let(:ship) {double :ship, location: 'X'}
@@ -15,7 +15,8 @@ describe Board do
 		expect(ship.location).to eq('X')
 	end
 
-	it 'know when a ship has been hit' do 
+	xit 'know when a ship has been hit' do
+		board.place(ship)
 		board.hit(ship.location)
 		expect(board).to be_locating_the_hit
 	end

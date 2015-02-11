@@ -10,4 +10,8 @@ describe Ship do
 		expect(ship.location).to eq('X')
 	end
 
+  it 'should know its sunk' do
+    expect(ship).to be_sunk
+  end
+
 end
