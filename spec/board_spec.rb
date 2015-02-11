@@ -6,15 +6,15 @@ describe Board do
 	let(:ship) {double :ship, length: 2}
 
 
-	it 'can place a ship at a location' do
+	it 'can place a ship at a location A1' do
 		board.place(ship, 'A1')
 		expect(board.locate(ship)).to eq ('A1')
 	end
 
-	xit 'know when a ship has been hit' do
-		board.place(ship)
-		board.hit(ship.location)
-		expect(board).to be_locating_the_hit
+	it 'can place a ship at a location B2' do
+		board.place(ship, 'B2')
+		expect(board.locate(ship)).to eq ('B2')
 	end
+
 
 end
