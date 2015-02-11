@@ -2,8 +2,9 @@ class Board
 
 
 	def place(ship, coord)
-		# ships << ship
-		coords << coord
+		coord.each do |c|
+			coords << c
+		end
 	end
 
 	def coords
@@ -19,8 +20,6 @@ class Board
 	def locate(ship)
 		ship.coord
 	end
-
-
 
 
 end
