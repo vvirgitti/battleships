@@ -54,5 +54,10 @@ describe Board do
 		expect(board.fire(marker)).not_to eq(['A1', 'B1'])
 	end
 
+	it 'can know that the ship has been hit' do
+		board.place_east(ship2,['A1'])
+		board.fire(marker)
+		expect(ship).to be_hit
+	end
 
 end
